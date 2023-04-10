@@ -8,6 +8,11 @@ public class Atividade24 {
 
         while (!continua.equalsIgnoreCase("N")) {
             System.out.print("Digite a quantidade de numeros a serem digitados: ");
+            
+            while (!input.hasNextInt()) {
+                System.out.print("Digite apenas numeros: ");
+                input.next();
+            }
             quantNumeros = input.nextInt();
 
             for (int i = 0; i < quantNumeros; i++) {
