@@ -1,10 +1,9 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Atividade24 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        ArrayList<Integer> numero = new ArrayList<>();
+        int num;
         String continua = "S";
 
         while (!continua.equalsIgnoreCase("N")) {
@@ -14,21 +13,19 @@ public class Atividade24 {
                 System.out.print("Digite apenas numeros: ");
                 input.next();
             }
-            numero.add(Integer.parseInt(input.nextLine()));
+            num = Integer.parseInt(input.nextLine());
+
+            System.out.printf("O numero %d e ", num);
+            if (num > 0) {
+                System.out.println("positivo");
+            } else if (num < 0) {
+                System.out.println("negativo");
+            } else {
+                System.out.println("neutro");
+            }
 
             System.out.print("Deseja continuar? [S/N] ");
             continua = input.nextLine();
-        }
-
-        for (int i = 0; i < numero.size(); i++) {
-            System.out.print(numero.get(i));
-            if (numero.get(i) > 0) {
-                System.out.println(" - positivo");
-            } else if (numero.get(i) < 0) {
-                System.out.println(" - negativo");
-            } else {
-                System.out.println(" - neutro");
-            }
         }
     }
 }
