@@ -19,8 +19,6 @@ public class Atividade24 {
                 }
                 num = input.nextInt();
 
-                input.nextLine();   // consome o buffer/enter
-
                 System.out.printf("O numero %d e ", num);
                 if (num > 0) {
                     System.out.println("positivo");
@@ -30,6 +28,8 @@ public class Atividade24 {
                     System.out.println("neutro");
                 }
             }
+            
+            input.nextLine();
             
             System.out.print("Deseja continuar? [S/N] ");
             continua = input.nextLine();
