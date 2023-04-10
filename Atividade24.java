@@ -13,7 +13,8 @@ public class Atividade24 {
                 System.out.print("Digite apenas numeros: ");
                 input.next();
             }
-            num = Integer.parseInt(input.nextLine());
+            num = input.nextInt();
+            input.nextLine(); // consome o buffer/enter
 
             System.out.printf("O numero %d e ", num);
             if (num > 0) {
